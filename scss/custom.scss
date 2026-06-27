@@ -1,0 +1,126 @@
+// Variables personalizadas de Bootstrap
+// Se definen antes del import para sobrescribir los valores por defecto
+
+$primary: #42f551;
+$primary-hover: #2ecc3d;
+
+$dark: #111827;
+$light: #f3f4f6;
+$white: #ffffff;
+
+$text-color: #374151;
+$text-muted: #aaa;
+
+$accordion-bg: #f0fdf4;
+
+$body-bg: $light;
+$body-color: $text-color;
+
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+
+$border-radius: .75rem;
+
+// Importación de Bootstrap con las variables personalizadas aplicadas
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// Estilos generales
+
+body {
+    background-color: $light;
+    color: $text-color;
+}
+
+
+// Navbar
+
+.logo-imagen {
+    width: 50px;
+    border-radius: 0;
+}
+
+
+// Botones
+
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: $dark;
+    font-weight: 600;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $primary-hover;
+        border-color: $primary-hover;
+        color: $dark;
+    }
+}
+
+
+// Tarjetas
+
+.card {
+    background-color: $white;
+    border: 2px solid $primary;
+    color: $text-color;
+
+    .card-title {
+        color: $dark;
+        font-weight: 600;
+    }
+}
+
+
+// Acordeón
+
+.accordion-button {
+    &:not(.collapsed) {
+        background-color: $accordion-bg;
+        color: $dark;
+        box-shadow: none;
+    }
+}
+
+
+// Footer
+
+footer {
+    background-color: $dark;
+    color: $text-muted;
+
+    h2 {
+        color: $primary;
+    }
+
+    h3 {
+        color: $white;
+    }
+
+    a {
+        color: $text-muted;
+        text-decoration: none;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+
+// Utilidades
+
+.border-secondary {
+    border-color: $text-color !important;
+}
+
+.productos-ocultos {
+    display: none;
+}
+
+
+// Tamaños personalizados
+
+.min-vh-70 {
+    min-height: 70vh;
+}
