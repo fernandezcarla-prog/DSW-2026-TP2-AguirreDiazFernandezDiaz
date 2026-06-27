@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TrueGainLabs - Suplementos deportivos de máxima calidad. Proteínas, creatina, BCAA y más con envío a toda Argentina.">
+  <meta name="keywords" content="suplementos deportivos, proteínas, creatina, BCAA, vitaminas, Santa Fe Argentina">
+  <meta name="author" content="TrueGainLabs">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>TrueGainLabs | Suplementos Deportivos</title>
+</head>
+<body>
+
+  <!-- Navbar de Bootstrap: se convierte en un botón hamburguesa en pantallas pequeñas (navbar-expand-md) -->
+  <!-- NAVBAR - Componente Bootstrap JS (cambia en mobile) -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="./img/logo.png" alt="Logo TrueGainLabs" class="logo-imagen">
+        <span>TrueGainLabs</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Seccion hero: usa el sistema de grilla de Bootstrap (row y col-md-6) para dividir en dos columnas -->
+    <!-- HERO -->
+    <section class="container my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1>Bienvenido a TrueGainLabs</h1>
+          <p class="lead">Suplementos deportivos de máxima calidad para potenciar tu rendimiento.</p>
+          <a href="productos.html" class="btn btn-primary fw-bold px-4 py-2">Ver Productos</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="./img/logo.png" alt="TrueGainLabs suplementos deportivos" class="img-fluid" style="max-width: 300px;">
+        </div>
+      </div>
+    </section>
+
+   <!-- carrousel rota cada 2,5s -->
+    <section class="container my-4">
+      <div id="carouselProductos" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <div class="row justify-content-center bg-white py-3 rounded">
+              <div class="col-3 text-center">
+                <img src="./img/bcaa.webp" alt="BCAA suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+              <div class="col-3 text-center">
+                <img src="./img/creatina.webp" alt="Creatina suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+              <div class="col-3 text-center">
+                <img src="./img/multivitaminico.webp" alt="Multivitamínico suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center bg-white py-3 rounded">
+              <div class="col-3 text-center">
+                <img src="./img/eaa.webp" alt="EAA suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+              <div class="col-3 text-center">
+                <img src="./img/caffeine.webp" alt="Caffeine suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+              <div class="col-3 text-center">
+                <img src="./img/colageno.webp" alt="Colágeno suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center bg-white py-3 rounded">
+              <div class="col-3 text-center">
+                <img src="./img/hmb.webp" alt="HMB suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+              <div class="col-3 text-center">
+                <img src="./img/L-glutamine.webp" alt="L-Glutamine suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+              <div class="col-3 text-center">
+                <img src="./img/mutantmass.webp" alt="Mutant Mass suplemento" class="img-fluid" style="height:150px; object-fit:contain;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Cards de Bootstrap: tres columnas responsivas con col-md-4, se apilan en mobile -->
+    <!-- CARDS DE BENEFICIOS -->
+    <section class="container my-4">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card text-center h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Envío gratis</h3>
+              <p class="card-text">Para compras mayores a $50.000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Cuotas sin interés</h3>
+              <p class="card-text">Hasta 6 cuotas sin interés</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Descuento 15%</h3>
+              <p class="card-text">Para compras mayores a $70.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: tres columnas con el sistema de grilla de Bootstrap (col-md-4) -->
+  <!-- FOOTER -->
+  <footer class="mt-4 py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h2>TrueGainLabs</h2>
+          <p>Potenciamos tu rendimiento con suplementos de máxima calidad. Más de 10 años acompañando atletas y personas activas.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Enlaces</h3>
+          <div class="d-flex flex-column gap-1">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="nosotros.html">Quiénes Somos</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Contacto</h3>
+          <p>📍 Santa Fe, Argentina</p>
+          <p>📞 +54 0000 000000</p>
+          <p>✉ correo@truegainlabs.com</p>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center small">© 2026 TrueGainLabs</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

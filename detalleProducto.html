@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle del Multivitamínico TrueGainLabs. Vitaminas A, C, D, E, K y complejo B para potenciar tu rendimiento diario.">
+  <meta name="keywords" content="multivitamínico, vitaminas, suplemento, TrueGainLabs, detalle producto">
+  <meta name="author" content="TrueGainLabs">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Multivitamínico | TrueGainLabs</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="./img/logo.png" alt="Logo TrueGainLabs" class="logo-imagen">
+        <span>TrueGainLabs</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- dos columnas con imagen a la izquierda y datos del producto a la derecha (col-md-6) -->
+  <main class="container my-4">
+
+    <div class="row align-items-center g-4">
+
+      <div class="col-md-6 text-center">
+        <img src="./img/multivitaminico.webp" alt="Multivitamínico TrueGainLabs suplemento vitaminas" class="img-fluid rounded shadow" style="max-height: 350px; object-fit: contain;">
+      </div>
+
+      <div class="col-md-6">
+        <h1>Multivitamínico</h1>
+        <p class="fs-4 fw-bold text-success">$120</p>
+        <p>Suplemento multivitamínico completo con vitaminas A, C, D, E, K y complejo B. Ideal para complementar tu dieta diaria y mantener un rendimiento óptimo.</p>
+
+        <!-- Toast de Bootstrap: notificacion de confirmación acuando agregamos el producto al carrito -->
+        <!-- TOAST - Componente Bootstrap JS -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+          <div id="toastDetalle" class="toast text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body fw-bold">✅ Multivitamínico agregado al carrito</div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary fw-bold px-4 mt-2" id="botonAgregarDetalle">Agregar al carrito</button>
+        <a href="productos.html" class="btn btn-outline-secondary ms-2 mt-2">Volver a productos</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-4 py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h2>TrueGainLabs</h2>
+          <p>Potenciamos tu rendimiento con suplementos de máxima calidad. Más de 10 años acompañando atletas y personas activas.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Enlaces</h3>
+          <div class="d-flex flex-column gap-1">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="nosotros.html">Quiénes Somos</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Contacto</h3>
+          <p>📍 Santa Fe, Argentina</p>
+          <p>📞 +54 0000 000000</p>
+          <p>✉ correo@truegainlabs.com</p>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center small">© 2026 TrueGainLabs</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript: evento click en el botón Agregar que muestra el Toast de confirmación -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Evento click en "Agregar al carrito" - muestra Toast de confirmación
+    document.getElementById('botonAgregarDetalle').addEventListener('click', function() {   // busca el boton agregar al carrito y captura el click
+      var toast = new bootstrap.Toast(document.getElementById('toastDetalle'), { delay: 2500 });  // crea el toast de bootstrap buscandolo por su id con un tiempo de 2,5s
+      toast.show(); //el toast aparece en pantalla
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu carrito de compras en TrueGainLabs. Revisá tus productos y finalizá tu pedido de suplementos deportivos.">
+  <meta name="keywords" content="carrito de compras, suplementos, TrueGainLabs, pedido">
+  <meta name="author" content="TrueGainLabs">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./img/logo.png" type="image/png">
+  <title>Carrito | TrueGainLabs</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="./img/logo.png" alt="Logo TrueGainLabs" class="logo-imagen">
+        <span>TrueGainLabs</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4 ">
+
+    <h1 class="text-center mb-4">Carrito de Compras</h1>
+
+    <!-- Items del carrito: cada producto usa la grilla de Bootstrap (col-3, col-5, col-4) para imagen, nombre y precio -->
+    <!-- Item 1 -->
+    <div class="row align-items-center border rounded p-3 mb-3 bg-white shadow-sm">
+      <div class="col-3 col-md-2">
+        <img src="./img/bcaa.webp" alt="BCAA aminoácidos ramificados" class="img-fluid rounded w-75">
+      </div>
+      <div class="col-5 col-md-7">
+        <h2 class="fs-5 fw-bold mb-1">BCAA</h2>
+        <p class="text-muted mb-0">Cantidad: 1</p>
+      </div>
+      <div class="col-4 col-md-3 text-end">
+        <span class="fw-bold fs-5">$120</span>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="row align-items-center border rounded p-3 mb-3 bg-white shadow-sm">
+      <div class="col-3 col-md-2">
+        <img src="./img/creatina.webp" alt="Creatina monohidrato suplemento" class="img-fluid rounded w-75">
+      </div>
+      <div class="col-5 col-md-7">
+        <h2 class="fs-5 fw-bold mb-1">Creatina</h2>
+        <p class="text-muted mb-0">Cantidad: 2</p>
+      </div>
+      <div class="col-4 col-md-3 text-end">
+        <span class="fw-bold fs-5">$100</span>
+      </div>
+    </div>
+
+    <!-- Barra de total: fondo oscuro con dos columnas, botón a la izquierda y total a la derecha -->
+    <!-- Total -->
+    <div class="row bg-dark text-white rounded p-3 mt-4 align-items-center">
+      <div class="col-12 col-md-6 mb-2 mb-md-0">
+        <button class="btn btn-primary fw-bold w-100" id="botonFinalizar">Finalizar Compra</button>
+      </div>
+      <div class="col-12 col-md-6 text-md-end">
+        <h2 class="fs-4 mb-0">Total: $220</h2>
+      </div>
+    </div>
+
+    <!-- Alert de Bootstrap: oculta por defecto, se muestra al hacer click en Finalizar Compra mediante JS -->
+    <!-- ALERT - Componente Bootstrap JS (confirmación de compra) -->
+    <div id="alertaCompra" class="alert alert-success alert-dismissible fade mt-4" role="alert" style="display:none;">
+      <strong>¡Compra realizada con éxito!</strong> Gracias por tu pedido. Nos contactaremos a la brevedad.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-4 py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h2>TrueGainLabs</h2>
+          <p>Potenciamos tu rendimiento con suplementos de máxima calidad. Más de 10 años acompañando atletas y personas activas.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Enlaces</h3>
+          <div class="d-flex flex-column gap-1">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="nosotros.html">Quiénes Somos</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Contacto</h3>
+          <p>📍 Santa Fe, Argentina</p>
+          <p>📞 +54 0000 000000</p>
+          <p>✉ correo@truegainlabs.com</p>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center small">© 2026 TrueGainLabs</p>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript: evento click en Finalizar Compra que muestra el Alert y hace scroll automático -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script>
+    // Evento click en "Finalizar Compra" - muestra el Alert de confirmación
+    document.getElementById('botonFinalizar').addEventListener('click', function() { //busca el boton finalizar compra y capturamos el evento click
+      var alerta = document.getElementById('alertaCompra'); // guarda el elemento de alerta compra en la variable
+      alerta.style.display = 'block'; // hace visible el alert que estaba oculto con display:none
+      alerta.classList.add('show'); // agrega clase "show" necesaria para bootstrap para mostrar el alert con la animacion
+      alerta.scrollIntoView({ behavior: 'smooth' }); // desplaza suavemente la pantalla hacia donde esta el alerta
+    });
+  </script>
+
+</body>
+</html>
